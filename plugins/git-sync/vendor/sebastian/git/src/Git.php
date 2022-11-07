@@ -24,6 +24,7 @@ class Git
      */
     public function __construct($repositoryPath)
     {
+	$this->grav['log']->info($repositoryPath);
         if (!is_dir($repositoryPath)) {
             throw new RuntimeException(
                 sprintf(
